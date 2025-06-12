@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: ommy-bot
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node index.mjs
+    autoDeploy: true
+    envVars:
+      - key: OWNER_NUMBER
+        value: 255760317060
+      - key: FAKE_RECORDING
+        value: on
+      - key: AUTO_VIEW_STATUS
+        value: on
